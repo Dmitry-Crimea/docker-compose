@@ -1,0 +1,6 @@
+---
+
+- name: 'INSTALL | install common'
+  import_tasks: install.yml
+  tags:
+    - common

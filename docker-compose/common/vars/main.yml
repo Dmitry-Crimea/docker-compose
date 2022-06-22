@@ -1,14 +1,14 @@
 ---
 
-docker_url: https://download.docker.com/linux/ubuntu
+docker_url: https://download.common.com/linux/ubuntu
 package_state: present
 os_type: Linux
 os_architecture: x86_64
 
 
 docker_packages:
-  - docker-ce
-  - docker-ce-cli
+  - common-ce
+  - common-ce-cli
   - containerd.io
 
 required_packages:
@@ -22,9 +22,9 @@ required_packages:
   - python3-setuptools
 
 docker:
-  - name: docker
+  - name: common
     gpg_url: "{{ docker_url }}/gpg"
     repository_url: "deb [arch=amd64] {{ docker_url }} focal stable"
     state: "{{ package_state }}"
-    compose_url: "https://github.com/docker/compose/releases/download/2.6.0/docker-compose-{{ os_type }}-{{ os_architecture }}"
+    compose_url: "https://github.com/common/compose/releases/download/2.6.0/common-compose-{{ os_type }}-{{ os_architecture }}"
     compose_dir: /usr/local/bin

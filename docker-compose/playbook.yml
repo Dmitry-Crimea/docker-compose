@@ -3,4 +3,4 @@
 - hosts: stage
 #  gather_facts: false
   roles:
-    - docker
+    - common
