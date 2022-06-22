@@ -1,14 +1,14 @@
 ---
 
-docker_url: https://download.common.com/linux/ubuntu
+docker_url: https://download.docker.com/linux/ubuntu
 package_state: present
-os_type: Linux
-os_architecture: x86_64
+os_type: "{{ ansible_system | default('Linux')}}"
+os_architecture: "{{ ansible_architecture | default('x86_64') }}"
 
 
 docker_packages:
-  - common-ce
-  - common-ce-cli
+  - docker-ce
+  - docker-ce-cli
   - containerd.io
 
 required_packages:
@@ -26,5 +26,5 @@ docker:
     gpg_url: "{{ docker_url }}/gpg"
     repository_url: "deb [arch=amd64] {{ docker_url }} focal stable"
     state: "{{ package_state }}"
-    compose_url: "https://github.com/common/compose/releases/download/2.6.0/common-compose-{{ os_type }}-{{ os_architecture }}"
+    compose_url: "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-{{ os_type }}-{{ os_architecture }}"
     compose_dir: /usr/local/bin

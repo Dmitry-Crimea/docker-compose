@@ -12,24 +12,24 @@
   apt_key:
     url: "{{ item.gpg_url }}"
     state: "{{ item.state }}"
-  loop: "{{ common }}"
+  loop: "{{ docker }}"
 
 - name: Add Docker Repository
   apt_repository:
     repo: "{{ item.repository_url }}"
     state: "{{ item.state }}"
-  loop: "{{ common }}"
+  loop: "{{ docker }}"
 
-- name: install common packages
+- name: install docker packages
   apt:
     name: "{{ item }}"
     state: present
     update_cache: yes
   loop: "{{ docker_packages }}"
 
-- name: install common-compose
+- name: install docker-compose
   get_url:
     url: "{{ item.compose_url }}"
-    dest: "{{ item.compose_dir }}/common-compose"
+    dest: "{{ item.compose_dir }}/docker-compose"
     mode: a+x
-  loop: "{{ common }}"
+  loop: "{{ docker }}"
