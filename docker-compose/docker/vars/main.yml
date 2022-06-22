@@ -1,0 +1,30 @@
+---
+
+docker_url: https://download.docker.com/linux/ubuntu
+package_state: present
+os_type: Linux
+os_architecture: x86_64
+
+
+docker_packages:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+
+required_packages:
+  - aptitude
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - software-properties-common
+  - python3-pip
+  - virtualenv
+  - python3-setuptools
+
+docker:
+  - name: docker
+    gpg_url: "{{ docker_url }}/gpg"
+    repository_url: "deb [arch=amd64] {{ docker_url }} focal stable"
+    state: "{{ package_state }}"
+    compose_url: "https://github.com/docker/compose/releases/download/2.6.0/docker-compose-{{ os_type }}-{{ os_architecture }}"
+    compose_dir: /usr/local/bin
