@@ -1,0 +1,4 @@
+---
+
+- name: add docker-compose
+  import_tasks: gitlab.yml

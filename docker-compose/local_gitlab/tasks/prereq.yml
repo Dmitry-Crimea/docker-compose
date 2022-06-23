@@ -1,0 +1,9 @@
+---
+
+- name: make a dir
+  file:
+    path: "{{ item }}"
+    owner: "{{ gitlab_owner }}"
+    group: "{{ gitlab_group }}"
+    mode: "{{ gitlab_mod }}"
+  loop: "{{ gitlab_directory }}"

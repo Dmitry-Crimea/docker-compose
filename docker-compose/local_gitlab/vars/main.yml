@@ -1,0 +1,16 @@
+---
+
+gitlab_owner: root
+gitlab_group: root
+gitlab_mod: 0755
+server_dns_name:
+gitlab_config_dir: /opt/gitlab/config
+
+gitlab_directory:
+  - /opt/gitlab
+  - "{{ gitlab_config_dir }}"
+  - /opt/gitlab/logs
+  - /opt/gitlab/data
+  - /opt/gitlab-runner
+  - /opt/gitlab-runner/config
+  - /opt/gitlab-runner/data
