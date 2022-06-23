@@ -3,6 +3,7 @@
 - name: make a dir
   file:
     path: "{{ item }}"
+    state: "{{ dir_state }}"
     owner: "{{ gitlab_owner }}"
     group: "{{ gitlab_group }}"
     mode: "{{ gitlab_mod }}"

@@ -27,6 +27,13 @@
     update_cache: yes
   loop: "{{ docker_packages }}"
 
+- name: install pip packages
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop: "{{ pip_packages }}"
+
 - name: install docker-compose
   get_url:
     url: "{{ item.compose_url }}"

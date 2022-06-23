@@ -3,4 +3,5 @@
 - hosts: stage
   gather_facts: true
   roles:
-    - common
+#    - common
+    - local_gitlab

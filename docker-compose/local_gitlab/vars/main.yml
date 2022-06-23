@@ -3,8 +3,9 @@
 gitlab_owner: root
 gitlab_group: root
 gitlab_mod: 0755
-server_dns_name:
+server_dns_name: 192.168.42.223
 gitlab_config_dir: /opt/gitlab/config
+dir_state: directory
 
 gitlab_directory:
   - /opt/gitlab

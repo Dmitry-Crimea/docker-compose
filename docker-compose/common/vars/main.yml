@@ -5,6 +5,9 @@ package_state: present
 os_type: "{{ ansible_system | default('Linux')}}"
 os_architecture: "{{ ansible_architecture | default('x86_64') }}"
 
+pip_packages:
+  - docker
+  - docker-compose
 
 docker_packages:
   - docker-ce
