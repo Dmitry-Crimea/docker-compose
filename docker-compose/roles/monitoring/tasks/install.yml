@@ -1,4 +1,7 @@
-- name: monitoring
-  docker_compose:
-    project_name: monitoring
-    definition:
+
+- name: Run container
+  become: True
+  shell:
+    cmd: "docker-compose -f docker-compose_monitoring.yml up -d"
+    chdir: "{{ item.dir }}"
+  loop: "{{ monitoring }}"
