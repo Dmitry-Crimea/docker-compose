@@ -1,0 +1,4 @@
+- name: monitoring
+  docker_compose:
+    project_name: monitoring
+    definition:

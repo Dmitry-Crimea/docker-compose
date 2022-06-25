@@ -4,6 +4,7 @@ docker_url: https://download.docker.com/linux/ubuntu
 package_state: present
 os_type: "{{ ansible_system | default('Linux')}}"
 os_architecture: "{{ ansible_architecture | default('x86_64') }}"
+gitlab_config_dir:  /opt/gitlab/config
 
 pip_packages:
   - docker

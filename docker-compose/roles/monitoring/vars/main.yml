@@ -1,0 +1,11 @@
+---
+
+home_dir: root
+user:
+group:
+monitoring_dir:
+
+monitoring:
+  - name: monitoring
+    dir: "/{{ home_dir }}/{{ monitoring_dir }}"
+    state: directory

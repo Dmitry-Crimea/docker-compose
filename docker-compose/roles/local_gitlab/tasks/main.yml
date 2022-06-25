@@ -1,0 +1,10 @@
+---
+
+#- name: 'PREREQUISITES | make a dir for gitlab'
+#  import_tasks: prereq.yml
+#
+#- name: 'INSTALL | add docker-compose'
+#  import_tasks: gitlab.yml
+
+- name: 'CONFIG | configurate a gitlab'
+  import_tasks: config.yml

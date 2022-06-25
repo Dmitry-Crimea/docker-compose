@@ -1,0 +1,13 @@
+---
+
+- name: mkdir for monitoring
+  file:
+    path: "{{ item.dir }}/"
+    state: "{{ item.state }}"
+  loop: "{{ monitoring }}"
+
+- name: copying files
+  copy:
+    src: files/
+    dest: "{{ item.dir }}/"
+  loop: "{{ monitoring }}"
