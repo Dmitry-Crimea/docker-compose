@@ -1,0 +1,8 @@
+---
+
+- name: 'PREREQUISITES | prepare to install'
+  import_tasks: prereq.yml
+
+- name: 'INSTALL | install compose'
+  import_tasks: install.yml
+

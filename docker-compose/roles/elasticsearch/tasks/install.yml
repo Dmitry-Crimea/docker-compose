@@ -1,0 +1,13 @@
+---
+
+- name: copying compose file
+  template:
+    src: "{{ item.docker_compose_name }}.yml.j2"
+    dest: "{{ item.dir }}/{{ item.docker_compose_name }}.yml"
+  loop: "{{ elastic }}"
+
+- name: docker-compose up
+  shell:
+    cmd: "docker-compose -f {{ item.docker_compose_name }}.yml up -d"
+    chdir: "{{ item.dir }}"
+  loop: "{{ elastic }}"

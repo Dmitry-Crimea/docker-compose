@@ -1,0 +1,14 @@
+---
+
+home_dir: root
+user:
+group:
+elastic_dir: elasticsearch
+docker_compose_name: docker-compose_elasticsearch
+
+elastic:
+  - name: elastic
+    dir: "/{{ home_dir }}/{{ elastic_dir }}"
+    state: directory
+    docker_compose_name: "{{ docker_compose_name }}"
+

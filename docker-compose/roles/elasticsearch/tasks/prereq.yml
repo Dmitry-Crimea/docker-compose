@@ -1,0 +1,10 @@
+---
+
+- name: make a dir for elastic
+  file:
+    path: "{{ item.dir }}"
+    state: "{{ item.state }}"
+  loop: "{{ elastic }}"
+
+
+
