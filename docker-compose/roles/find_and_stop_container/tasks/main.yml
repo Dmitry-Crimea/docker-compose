@@ -1,0 +1,13 @@
+---
+
+- name: 'FIND | find containers'
+  import_tasks: find_containers.yml
+
+- name: 'STOP | stop working containers'
+  import_tasks: stop_containers.yml
+
+- name: 'DELETE_CONTAINER | delete containers'
+  import_tasks: delete_containers.yml
+
+- name: 'DELETE_IMAGES | delete images'
+  import_tasks: delete_docker_images.yml

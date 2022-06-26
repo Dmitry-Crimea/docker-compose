@@ -1,0 +1,8 @@
+---
+
+- name: Delete images
+  docker_image:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ image_info.images | map(attribute='Id') | list }}"
+

@@ -1,0 +1,7 @@
+---
+
+- name: Delete containers
+  docker_container:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ docker_info.containers | map(attribute='Id') | list }}"

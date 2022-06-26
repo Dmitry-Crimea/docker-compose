@@ -1,0 +1,14 @@
+---
+
+- name: Get running containers
+  docker_host_info:
+    containers: yes
+  register: docker_info
+
+- name: Get running containers
+  docker_host_info:
+    images: yes
+    verbose_output: yes
+  register: image_info
+
+

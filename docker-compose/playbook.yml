@@ -6,4 +6,5 @@
 #    - common
 #    - local_gitlab
 #    - monitoring
-    - elasticsearch
+#    - elasticsearch
+#    - find_and_stop_container
