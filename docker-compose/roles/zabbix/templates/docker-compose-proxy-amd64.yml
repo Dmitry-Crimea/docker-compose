@@ -17,10 +17,10 @@ services:
         restart: always
         environment:
             - ZBX_HOSTNAME={{ zbx_proxy_hostname }}
-            - ZBX_SERVER_HOST=194.67.90.42
+            - ZBX_SERVER_HOST={{ zabbix_proxy_host }}
             - ZBX_SERVER_PORT=10051
             - ZBX_DEBUGLEVEL=1
-            - ZBX_PROXYMODE=1 # 0 - active proxy and 1 - passive proxy.
+            - ZBX_PROXYMODE={{ zbx_proxy_proxymode }} # 0 - active proxy and 1 - passive proxy.
             - ZBX_CONFIGFREQUENCY=3600
     agent:
         image: zabbix/zabbix-agent:alpine-latest
