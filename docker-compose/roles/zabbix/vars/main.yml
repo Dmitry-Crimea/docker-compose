@@ -1,0 +1,34 @@
+---
+
+user:
+home_dir: root
+group:
+
+zabbix_proxy_directory:
+  - /usr/lib/zabbix/externalscripts
+  - /var/lib/zabbix/modules
+  - /var/lib/zabbix/enc
+  - /var/lib/zabbix/ssh_keys
+  - /var/lib/zabbix/ssl/certs
+  - /var/lib/zabbix/ssl/keys
+  - /var/lib/zabbix/ssl/ssl_ca
+  - /var/lib/zabbix/snmptraps
+  - /var/lib/zabbix/mibs
+
+zabbix_proxy_work_dir: "/{{ home_dir }}/zabbix"
+
+zabbix_proxy_state: directory
+
+zbx_proxy_hostname: zabbix-proxy-sqlite3
+
+zabbix_server_directory:
+  - /etc/localtime
+  - /etc/timezone
+  - /usr/lib/zabbix/alertscripts
+  - /usr/lib/zabbix/externalscripts
+  - /var/lib/zabbix/export
+  - /var/lib/zabbix/modules
+  - /var/lib/zabbix/enc
+  - /var/lib/zabbix/ssh_keys
+  - /var/lib/zabbix/mibs
+  - /var/lib/zabbix/snmptraps

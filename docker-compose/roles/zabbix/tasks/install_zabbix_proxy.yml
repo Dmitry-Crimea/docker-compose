@@ -1,0 +1,24 @@
+---
+
+- name: make a zabbix_proxy directory
+  file:
+    path: "{{ item }}"
+    state: "{{ zabbix_proxy_state }}"
+  loop: "{{ zabbix_proxy_directory }}"
+  ignore_errors: yes
+
+- name: make a zabbix workdir
+  file:
+    path: "{{ zabbix_proxy_work_dir }}"
+    state: "{{ zabbix_proxy_state }}"
+  ignore_errors: yes
+-
+- name: copying zabbix proxy
+  template:
+    src: docker-compose-proxy-amd64.yml
+    dest: "{{ zabbix_proxy_work_dir }}/docker-compose-proxy-amd64.yml"
+
+- name: zabbix_proxy_up
+  shell:
+    cmd: docker-compose -f docker-compose-proxy-amd64.yml up -d
+    chdir: "{{ zabbix_proxy_work_dir }}"

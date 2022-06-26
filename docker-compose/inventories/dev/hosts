@@ -1,0 +1,5 @@
+[sarawan]
+188.225.57.227
+
+[zabbix]
+194.9.26.56 ansible_port=52222

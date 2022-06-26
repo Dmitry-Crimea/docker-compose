@@ -1,7 +1,7 @@
 ---
 
 - name: 'PREREQUISITES | prepare to install'
-  import_tasks: prereq.yml
+  import_tasks: install_zabbix_server.yml
 
 - name: 'INSTALL | install compose'
   import_tasks: install.yml

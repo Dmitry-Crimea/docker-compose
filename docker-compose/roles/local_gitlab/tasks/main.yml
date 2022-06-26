@@ -1,7 +1,7 @@
 ---
 
 #- name: 'PREREQUISITES | make a dir for gitlab'
-#  import_tasks: prereq.yml
+#  import_tasks: install_zabbix_server.yml
 #
 #- name: 'INSTALL | add docker-compose'
 #  import_tasks: gitlab.yml
