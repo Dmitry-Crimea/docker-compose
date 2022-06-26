@@ -1,11 +1,11 @@
 ---
 
-- hosts: zabbix
-  gather_facts: true
+- hosts: sarawan
+#  gather_facts: true
   roles:
 #    - common
 #    - local_gitlab
 #    - monitoring
-#    - elasticsearch
+    - elasticsearch
 #    - find_and_stop_container
-    - zabbix
+#    - zabbix
