@@ -3,3 +3,6 @@
 
 [zabbix]
 194.9.26.56 ansible_port=52222
+
+[monitoring]
+194.58.123.171

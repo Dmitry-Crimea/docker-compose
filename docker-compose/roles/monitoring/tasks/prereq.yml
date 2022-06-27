@@ -2,7 +2,7 @@
 
 - name: mkdir for monitoring
   file:
-    path: "{{ item.dir }}/"
+    path: "{{ item.dir }}"
     state: "{{ item.state }}"
   loop: "{{ monitoring }}"
 

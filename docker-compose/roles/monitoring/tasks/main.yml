@@ -1,7 +1,7 @@
 ---
 
 - name: 'PREREQUISITES | prepare to install'
-  import_tasks: install_zabbix_server.yml
+  import_tasks: prereq.yml
 
 - name: 'INSTALL | install docker-compose_monitoring'
   import_tasks: install.yml
