@@ -6,5 +6,9 @@
     state: "{{ item.state }}"
   loop: "{{ elastic }}"
 
-
+- name: make a dir for elastic
+  file:
+    path: "{{ item.data }}"
+    state: "{{ item.state }}"
+  loop: "{{ elastic }}"
 

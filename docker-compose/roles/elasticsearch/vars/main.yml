@@ -11,4 +11,5 @@ elastic:
     dir: "/{{ home_dir }}/{{ elastic_dir }}"
     state: directory
     docker_compose_name: "{{ docker_compose_name }}"
+    data: "/{{ home_dir }}/{{ elastic_dir }}/data"
 
