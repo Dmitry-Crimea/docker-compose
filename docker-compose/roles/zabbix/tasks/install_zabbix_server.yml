@@ -10,6 +10,7 @@
     path: "{{ item }}"
     state: "{{ zabbix_proxy_state }}"
   loop: "{{ zabbix_server_directory }}"
+  ignore_errors: yes
 
 - name: copying zabbix proxy
   template:

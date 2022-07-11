@@ -5,7 +5,7 @@ home_dir: root
 group:
 
 zabbix_proxy_host: 194.67.90.42
-zbx_proxy_hostname: zabbix_proxy_padin
+zbx_proxy_hostname: zabbix_proxy_zazerkalie
 zbx_proxy_proxymode: 0  # 0 - active proxy and 1 - passive proxy.
 
 

@@ -1,7 +1,7 @@
 ---
+#
+#- name: 'INSTALL_ZABBIX_PROXY | install zabbix proxy server'
+#  import_tasks: install_zabbix_proxy.yml
 
-- name: 'INSTALL_ZABBIX_PROXY | install zabbix proxy server'
-  import_tasks: install_zabbix_proxy.yml
-
-#- name: 'INSTALL_ZABBIX_SERVER | install zabbix server'
-#  import_tasks: install_zabbix_server.yml
+- name: 'INSTALL_ZABBIX_SERVER | install zabbix server'
+  import_tasks: install_zabbix_server.yml
